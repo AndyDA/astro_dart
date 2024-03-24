@@ -25,7 +25,7 @@ import tupperwave from "../images/clients/Tupperware.svg";
     </div>
     <div class="hero__buttons">
       <a
-        href="/work"
+        href="/work.html"
         class="button button--style--primary button--size--regular"
       >
         <div class="button__inner">
@@ -34,7 +34,7 @@ import tupperwave from "../images/clients/Tupperware.svg";
       </a>
 
       <a
-        href="/contact"
+        href="/contact.html"
         class="button button--style--secondary button--size--regular"
       >
         <div class="button__inner">
@@ -181,7 +181,10 @@ import tupperwave from "../images/clients/Tupperware.svg";
   <div
     class="container mx-auto work-display-cta flex justify-center mt-24 mb-28"
   >
-    <a href="/work" class="button button--style--secondary button--size--large">
+    <a
+      href="works.html"
+      class="button button--style--secondary button--size--large"
+    >
       <div class="button__inner">
         <div class="button__label">I wanna see more</div>
 
@@ -200,13 +203,22 @@ import tupperwave from "../images/clients/Tupperware.svg";
       </li>
 
       <li>
+        <img class="" src=`${base}/assets/images/clients/GATX.svg` alt="" />
+      </li>
+      <li>
         <Image class="" src={gatx} alt="" />
       </li>
 
       <li>
+        <img class="" src=`${base}/assets/images/clients/Redbull.svg` alt="" />
+      </li>
+      <li>
         <Image class="" src={redbull} alt="" />
       </li>
 
+      <li>
+        <img class="" src=`${base}/assets/images/clients/HRA.svg` alt="" />
+      </li>
       <li>
         <Image class="" src={hra} alt="" />
       </li>
@@ -214,35 +226,88 @@ import tupperwave from "../images/clients/Tupperware.svg";
       <li>
         <Image class="" src={osce} alt="" />
       </li>
+      <li>
+        <img class="" src=`${base}/assets/images/clients/OSCE.svg` alt="" />
+      </li>
 
       <li>
         <Image class="" src={otta} alt="" />
+      </li>
+      <li>
+        <img class="" src=`${base}/assets/images/clients/Otta.svg` alt="" />
       </li>
 
       <li>
         <Image class="" src={ses} alt="" />
       </li>
+      <li>
+        <img class="" src=`${base}/assets/images/clients/SES.svg` alt="" />
+      </li>
 
       <li>
         <Image class="" src={air} alt="" />
+      </li>
+      <li>
+        <img class="" src=`${base}/assets/images/clients/Air.svg` alt="" />
       </li>
 
       <li>
         <Image class="" src={ec} alt="" />
       </li>
+      <li>
+        <img class="" src=`${base}/assets/images/clients/EC.svg` alt="" />
+      </li>
 
       <li>
         <Image class="" src={greenfibra} alt="" />
+      </li>
+      <li>
+        <img
+          class=""
+          src=`${base}/assets/images/clients/Greenfibra.svg`
+          alt=""
+        />
       </li>
 
       <li>
         ``
         <Image class="" src={signmesh} alt="" />
       </li>
+      <li>
+        <img class="" src=`${base}/assets/images/clients/Signmesh.svg` alt="" />
+      </li>
 
       <li>
         <Image class="" src={cricova} alt="" />
       </li>
     </ul>
+    <li>
+      <img class="" src=`${base}/assets/images/clients/Cricova.svg` alt="" />
+    </li>
   </div>
 </BaseLayout>
+
+<script type="module" src="assets/scripts/main.js"></script>
+
+<script>
+  function init() {
+    if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      addAnimation();
+    }
+  }
+
+  function addAnimation() {
+    element.setAttribute("data-animated", true);
+
+    const scrollerInner = element.querySelector(".clients__inner");
+    const scrollerContent = Array.from(scrollerInner.children);
+
+    scrollerContent.forEach((item) => {
+      const dup = item.cloneNode(true);
+      dup.setAttribute("aria-hidden", true);
+      scrollerInner.appendChild(dup);
+    });
+  }
+
+  init();
+</script>
