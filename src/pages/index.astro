@@ -1,6 +1,19 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-const base = import.meta.env.BASE_URL;
+import { Image } from "astro:assets";
+
+import air from "../images/clients/Air.svg";
+import cricova from "../images/clients/Cricova.svg";
+import ec from "../images/clients/EC.svg";
+import gatx from "../images/clients/GATX.svg";
+import greenfibra from "../images/clients/Greenfibra.svg";
+import hra from "../images/clients/HRA.svg";
+import osce from "../images/clients/OSCE.svg";
+import otta from "../images/clients/Otta.svg";
+import redbull from "../images/clients/Redbull.svg";
+import ses from "../images/clients/SES.svg";
+import signmesh from "../images/clients/Signmesh.svg";
+import tupperwave from "../images/clients/Tupperware.svg";
 ---
 
 <BaseLayout>
@@ -183,49 +196,71 @@ const base = import.meta.env.BASE_URL;
       </div>
     </a>
   </div>
-
   <div class="clients" data-component='{"component": "scroller"}'>
     <ul class="clients__inner">
       <li>
-        <img
-          class=""
-          src=`${base}/assets/images/clients/Tupperware.svg`
-          alt=""
-        />
+        <Image class="" src={tupperwave} alt="" />
       </li>
 
       <li>
         <img class="" src=`${base}/assets/images/clients/GATX.svg` alt="" />
       </li>
+      <li>
+        <Image class="" src={gatx} alt="" />
+      </li>
 
       <li>
         <img class="" src=`${base}/assets/images/clients/Redbull.svg` alt="" />
+      </li>
+      <li>
+        <Image class="" src={redbull} alt="" />
       </li>
 
       <li>
         <img class="" src=`${base}/assets/images/clients/HRA.svg` alt="" />
       </li>
+      <li>
+        <Image class="" src={hra} alt="" />
+      </li>
 
+      <li>
+        <Image class="" src={osce} alt="" />
+      </li>
       <li>
         <img class="" src=`${base}/assets/images/clients/OSCE.svg` alt="" />
       </li>
 
       <li>
+        <Image class="" src={otta} alt="" />
+      </li>
+      <li>
         <img class="" src=`${base}/assets/images/clients/Otta.svg` alt="" />
       </li>
 
+      <li>
+        <Image class="" src={ses} alt="" />
+      </li>
       <li>
         <img class="" src=`${base}/assets/images/clients/SES.svg` alt="" />
       </li>
 
       <li>
+        <Image class="" src={air} alt="" />
+      </li>
+      <li>
         <img class="" src=`${base}/assets/images/clients/Air.svg` alt="" />
       </li>
 
       <li>
+        <Image class="" src={ec} alt="" />
+      </li>
+      <li>
         <img class="" src=`${base}/assets/images/clients/EC.svg` alt="" />
       </li>
 
+      <li>
+        <Image class="" src={greenfibra} alt="" />
+      </li>
       <li>
         <img
           class=""
@@ -235,13 +270,20 @@ const base = import.meta.env.BASE_URL;
       </li>
 
       <li>
+        ``
+        <Image class="" src={signmesh} alt="" />
+      </li>
+      <li>
         <img class="" src=`${base}/assets/images/clients/Signmesh.svg` alt="" />
       </li>
 
       <li>
-        <img class="" src=`${base}/assets/images/clients/Cricova.svg` alt="" />
+        <Image class="" src={cricova} alt="" />
       </li>
     </ul>
+    <li>
+      <img class="" src=`${base}/assets/images/clients/Cricova.svg` alt="" />
+    </li>
   </div>
 </BaseLayout>
 
