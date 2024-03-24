@@ -1,11 +1,20 @@
 ---
+import { Image } from "astro:assets";
+
+import Logo from " ../images/logo.svg";
 const base = import.meta.env.BASE_URL;
 ---
 
 <div class="header" data-component='{"component": "header"}'>
   <div class="header__logo">
     <a href="./">
-      <img class="log" src=`${base}/assets/images/logo.svg` alt="Logo Dart" />
+      <Image
+        class="logo"
+        src=`${ base }/images/logo.svg`
+        alt="Logo Dart"
+        width={30}
+        height={40}
+      />
     </a>
   </div>
   <nav class="header__menu">
